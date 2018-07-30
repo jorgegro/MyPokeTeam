@@ -1,0 +1,35 @@
+.searchBar {
+  width: 380px;
+  display: inline;
+}
+
+.zoom {
+  padding: 50px;
+  background-color: transparent;
+  transition: transform .2s;
+  /* Animation */
+  margin: 0 auto;
+}
+
+.zoom:hover {
+  transform: scale(2);
+  /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+.block {
+  height: auto;
+  width: 450px;
+  position: absolute;
+  top: 10%;
+  left: 30%;
+}
+
+.hidden {
+  visibility: hidden;
+}
+.select{
+    height: 110vh;
+}
+.select-background{
+    background-color: rgb(121, 168, 255);
+}

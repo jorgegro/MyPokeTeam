@@ -1,0 +1,44 @@
+.back{
+    background-image: url(https://orig00.deviantart.net/4ee0/f/2014/303/f/2/pokemon_sprite_gif___petalburg_woods_by_loupii-d7i3cm4.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    
+}
+.col{
+    width: 40%;
+}
+.or{
+    
+    padding-top:1em;
+    font-size: 10em;
+    font-family: 'Lobster', cursive;
+    color: red;
+    text-decoration:underline;
+    text-decoration-color: black;
+    
+}
+.girl{
+    padding-right: 10em;
+    padding-top: 8em;
+    text-align: left;
+}
+.boy{
+    padding-left: 10em;
+    padding-top: 8em;
+    text-align: right;
+   
+}
+label > input{ /* HIDE RADIO */
+    visibility: hidden; /* Makes input not-clickable */
+    position: absolute; /* Remove input from document flow */
+  }
+  label > input + img{ /* IMAGE STYLES */
+    cursor:pointer;
+    border:2px solid transparent;
+  }
+  label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
+    border:2px solid #f00;
+  }
