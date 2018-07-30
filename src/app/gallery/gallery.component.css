@@ -5,3 +5,27 @@
 .pokeMenu{
     margin-top: 20vh;
 }
+.nav-text{
+    font-family: 'Lobster', cursive;
+    color:red;
+    font-size: .30in;
+  }
+
+  .back{
+    background-image: url(https://cdn.dribbble.com/users/813012/screenshots/2872715/attachments/592899/pokemon-template-poke-stop-test.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    color: whitesmoke;
+  }
+
+  .transparentBox{
+      background-color: #2626269a;
+      margin-top: 1in;
+      padding-left: .35in;
+     padding-top: .25in;
+     padding-bottom: .25in;
+  }
+  

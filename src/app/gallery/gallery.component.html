@@ -1,5 +1,5 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-danger">
-    <a class="navbar-brand" routerLink="/Home">PokeDisplay</a>
+<nav class="navbar navbar-expand-lg bg-light">
+    <a class="navbar-brand nav-text" routerLink="/Home">PokeDisplay</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -7,26 +7,30 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto ">
         <li class="nav-item active">
-          <a class="nav-link" routerLink="/Home">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link nav-text" routerLink="/Home">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" routerLink="/Select">Pokemons</a>
+          <a class="nav-link nav-text" routerLink="/Select">Pokemons</a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" routerLink="/Gallery">Gallery</a>
+          <a class="nav-link nav-text" routerLink="/Gallery">Gallery</a>
         </li>
       </ul>
     </div>
   </nav>
-<div class="container">
-  <div class="row" >
-    <div *ngFor="let pokemon of this.poke.team" class="col-lg-4 my-5">
-      <img src="{{pokemon.pic}}" alt="pokemon">
-      <span class="pr-5 pl-4"> Lvl {{pokemon.lvl}} </span>
-      <span> {{pokemon.name}} </span>
-      <span class="progress progressbar p-0 m-0">
-          <span class="progress-bar bg-success p-0 m-0" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">HP</span>
-      </span>
-    </div>
-  </div>
-</div>  
+<div class="back">
+    <div class="container-fluid">
+        <div class="row " >
+          <div *ngFor="let pokemon of this.poke.team" class="col-lg-4">
+            <div class="transparentBox">
+              <img src="{{pokemon.pic}}" alt="pokemon">
+              <span class="pr-5 pl-4"> Lvl {{pokemon.lvl}} </span>
+              <span> {{pokemon.name}} </span>
+              <span class="progress progressbar p-0 m-0">
+                  <span class="progress-bar bg-success p-0 m-0" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">HP</span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>  
+</div>
