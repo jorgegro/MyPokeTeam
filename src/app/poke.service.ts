@@ -7,7 +7,14 @@ import swal from 'sweetalert2';
   providedIn: 'root'
 })
 export class PokeService {
-  gender = "";
+  gender = null;
+
+  start(){
+    if(this.gender == true){
+
+    }
+  }
+
   input = "";
 
   team = [];
@@ -20,9 +27,6 @@ export class PokeService {
     empty: true,
     lvl: Math.trunc(Math.random() * 100)
   };
-
-  slot = 0;
-
 
   constructor(public http: HttpClient) { }
 

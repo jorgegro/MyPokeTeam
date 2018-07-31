@@ -29,3 +29,8 @@
      padding-bottom: .25in;
   }
   
+  .pokeBtn{
+      position: absolute;
+      top: 15%;
+      left: 45%;
+  }

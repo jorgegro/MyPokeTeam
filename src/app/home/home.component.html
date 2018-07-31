@@ -1,24 +1,22 @@
 <div class="container-fluid back">
-  <div class="row text-center pt-5 ">
-      <div class="col boy">
-        <label>
-          <input type="checkbox">
+  <div class="row text-center padTop">
+    <div class="col boy">
+      <form action="">
+        <label class="genderBoy" >
+          <input type="radio" name="gender" [(ngModel)]="this.poke.gender" [value]="true">
           <img src="./assets/155px-FireRed_LeafGreen_Red.png" alt="Boys">
         </label>
-      </div>
-      <div class="col px-0">
-        <h1 class="or">OR</h1>
-      </div>
-      <div class="col girl">
-        <label >
-          <input type="checkbox">
+        <span class="or">OR</span>
+        <label class="genderGirl" >
+          <input type="radio" name="gender" [(ngModel)]="this.poke.gender" [value]="false">
           <img src="./assets/140px-FireRed_LeafGreen_Leaf.png" alt="Girl">
         </label>
-      </div>
+      </form>
     </div>
-    <div class="row text-center">
-      <div class="col">
-        <button routerLink="/Select" class="btn btn-outline">Accept</button>
-      </div>
+  </div>
+  <div class="row text-center mt-5 pt-5">
+    <div class="col">
+      <button routerLink="/Select" (click)="this.poke.test()" class="btn btn-outline">Accept</button>
     </div>
+  </div>
 </div>

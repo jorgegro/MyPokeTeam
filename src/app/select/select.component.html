@@ -5,22 +5,6 @@
       aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-  
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto ">
-        <li class="nav-item active">
-          <a class="nav-link nav-text" routerLink="/Home">Home
-            <span class="sr-only">(current)</span>
-          </a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link nav-text" routerLink="/Select">Pokemons</a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link nav-text" routerLink="/Gallery">Gallery</a>
-        </li>
-      </ul>
-    </div>
   </nav>
   <div class="container">
     <div class="row text-center mt-5">
@@ -28,14 +12,12 @@
         <h1 class="mb-4">Pick your Pokémon!</h1>
           <input [(ngModel)]="this.poke.input" name="input" (keyup.enter)="this.poke.search()" class="searchBar form-control mx-3"
             type="search" placeholder="Pokemon">
-          <button (click)="this.poke.search()" class="btn btn-outline-dark mx-3">Search</button>
+          <button (click)="this.poke.search()" class="btn btn-outline-dark ml-2 mr-1">Search</button>
+          <button routerLink="/Gallery" class="mx-1 btn btn-outline-dark">My Team</button>
       </div>
     </div>
     <div class="row text-center mt-5">
       <div class="col">
-
-          <div id="loader"></div>
-
         <div class="p-2 block">
           <p>{{this.poke.select.name}}</p>
           <img class="my-2 zoom pokePic" src="{{this.poke.select.pic}}">

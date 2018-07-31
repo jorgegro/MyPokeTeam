@@ -7,31 +7,33 @@
     height: 100vh;
     
 }
-.col{
-    width: 40%;
+.btnPos{
+    position: absolute;
+    bottom: 10%;
+    left: 45%;
+}
+.genderBoy{
+    padding-right: 10%;
+}
+
+.genderGirl{
+    padding-left: 10%;
+}
+
+.padTop{
+    padding-top: 10%;
 }
 
 .or{
-    
-    padding-top:1em;
-    font-size: 10em;
-    font-family: 'Lobster', cursive;
-    color: red;
-    text-decoration:underline;
-    text-decoration-color: black;
-    
+   font-size: 8em;
+   font-family: 'Lobster', cursive; 
 }
-.girl{
-    padding-right: 10em;
-    padding-top: 8em;
-    text-align: left;
+.form-display{
+    display: inline-flex;
+    position: absolute;
+    left: 30%;
 }
-.boy{
-    padding-left: 10em;
-    padding-top: 8em;
-    text-align: right;
    
-}
 label > input{ /* HIDE RADIO */
     visibility: hidden; /* Makes input not-clickable */
     position: absolute; /* Remove input from document flow */
