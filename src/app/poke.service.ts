@@ -9,11 +9,10 @@ import swal from 'sweetalert2';
 export class PokeService {
   gender = null;
 
-  start(){
-    if(this.gender == true){
-
-    }
+  genderTheme(){
+   console.log(this.gender); 
   }
+  constructor(public http: HttpClient) { }
 
   input = "";
 
@@ -28,7 +27,9 @@ export class PokeService {
     lvl: Math.trunc(Math.random() * 100)
   };
 
-  constructor(public http: HttpClient) { }
+  removePokemon = (i) => {
+    this.team.splice(i,1);
+  }
 
   addPokemon = () => {
     if(this.team.length > 5){

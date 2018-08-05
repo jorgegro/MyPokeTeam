@@ -1,28 +1,43 @@
 <div class="select-background select">
-  <nav class="navbar navbar-expand-lg navbar-back bg-light">
+  <nav class="navbar navbar-expand-lg navbar-back bg-muted">
     <a class="navbar-brand nav-text" routerLink="/Home">PokeDisplay</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
       aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
   </nav>
-  <div class="container">
-    <div class="row text-center mt-5">
-      <div class="col">
-        <h1 class="mb-4">Pick your Pokémon!</h1>
-          <input [(ngModel)]="this.poke.input" name="input" (keyup.enter)="this.poke.search()" class="searchBar form-control mx-3"
-            type="search" placeholder="Pokemon">
-          <button (click)="this.poke.search()" class="btn btn-outline-dark ml-2 mr-1">Search</button>
-          <button routerLink="/Gallery" class="mx-1 btn btn-outline-dark">My Team</button>
+  <div [ngClass]=" this.poke.gender ? 'boyTheme' : 'girlTheme'">
+    <div class="container">
+      <div class="row text-center pt-5">
+        <div class="col">
+          <div class="row">
+            <div class="col">
+              <h1 class="mb-4">Pick your Pokémon!</h1>
+            </div>
+          </div>
+          <div class="row">
+            <div class="text-right col col-lg-2 col-md-4 col-sm-3">
+              <button routerLink="/Gallery" class="btn btn-outline-light">My Team</button>
+            </div>
+            <div class="col col-lg-8 col-md-6 col-sm-3">
+              <input [(ngModel)]="this.poke.input" name="input" (keyup.enter)="this.poke.search()" class="searchBar form-control"
+                type="search" placeholder="Pokemon">
+            </div>
+            <div class="text-left col col-lg-2 col-md-4 col-sm-3">
+
+              <button (click)="this.poke.search()" class="btn btn-outline-light">Search</button>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="row text-center mt-5">
-      <div class="col">
-        <div class="p-2 block">
-          <p>{{this.poke.select.name}}</p>
-          <img class="my-2 zoom pokePic" src="{{this.poke.select.pic}}">
-          <p class="text-dark text-justify">{{this.poke.select.description}}</p>
-          <button [class.hidden]="this.poke.select.empty" (click)="this.poke.addPokemon()" class="mt-4 btn btn-outline-dark">Add {{this.poke.select.name}} to the party!</button>
+      <div class="row text-center mt-5">
+        <div class="col">
+          <div class="p-2 block">
+            <p>{{this.poke.select.name}}</p>
+            <img class="my-2 zoom pokePic" src="{{this.poke.select.pic}}">
+            <p class="text-dark text-justify">{{this.poke.select.description}}</p>
+            <button [class.hidden]="this.poke.select.empty" (click)="this.poke.addPokemon()" class="mt-4 btn btn-outline-dark">Add {{this.poke.select.name}} to the party!</button>
+          </div>
         </div>
       </div>
     </div>

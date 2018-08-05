@@ -1,5 +1,4 @@
 .searchBar {
-  width: 380px;
   display: inline;
 }
 
@@ -32,22 +31,24 @@
   height: 110vh;
 }
 
-.select-background-boy {
+.boyTheme {
   background: #2193b0;
   /* fallback for old browsers */
   background: -webkit-linear-gradient(to left, #6dd5ed, #2193b0);
   /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to left, #6dd5ed, #2193b0);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: 110vh;
 }
 
-.select-background-girl {
+.girlTheme {
   background: #FFAFBD;
   /* fallback for old browsers */
   background: -webkit-linear-gradient(to bottom, #ffc3a0, #FFAFBD);
   /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to bottom, #ffc3a0, #FFAFBD);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: 110vh;
 }
 
 .navbar-back {

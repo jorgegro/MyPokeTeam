@@ -4,11 +4,12 @@
 <div class="back">
   <div class="container-fluid">
     <div class="row ">
-      <div *ngFor="let pokemon of this.poke.team" class="col-lg-4">
+      <div *ngFor="let pokemon of this.poke.team; let i = index" class="col-lg-4">
         <div class="transparentBox">
           <img src="{{pokemon.pic}}" alt="pokemon">
           <span class="pr-5 pl-4"> Lvl {{pokemon.lvl}} </span>
           <span> {{pokemon.name}} </span>
+          <span (click)="this.poke.removePokemon(i)" class="pl-5"><i class="far fa-times-circle"></i></span>
           <span class="progress progressbar p-0 m-0">
             <span class="progress-bar bg-success p-0 m-0" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0"
               aria-valuemax="100">HP</span>
@@ -17,5 +18,5 @@
       </div>
     </div>
   </div>
-  <button routerLink="/Select" class="btn btn-outline-light pokeBtn">More Pokémon...</button>
+  <button routerLink="/Select" class="btn btn-outline-dark pokeBtn">More Pokémon...</button>
 </div>
